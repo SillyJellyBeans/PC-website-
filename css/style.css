@@ -1,0 +1,235 @@
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#000000, #aa0b0b);
+    overflow-x: hidden;
+}
+
+.page-header {
+    padding: 2rem;
+    margin-bottom: 3rem;
+    display: flow-root; 
+    position: relative; 
+}
+
+head, .page-header {
+    padding: 2rem;
+    margin-bottom: 3rem;
+    display: flow-root; /* Contains floated elements */
+}
+
+.header-container {
+    display: flex;              /* Use flexbox for better alignment */
+    align-items: center;        /* Vertically center items */
+    gap: 3rem;                  /* Space between text and image */
+    padding: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1200px;          /* Optional: constrain maximum width */
+    margin-left: auto;          /* Center the container */
+    overflow: hidden; /* Contain the animation */
+    margin-right: auto;
+}
+
+/* Text Styles */
+.mainHead {
+    color: #c92f2f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;            /* Large text size */
+    line-height: 1.3;           /* Better readability */
+    flex: 1;                    /* Take available space */
+    min-width: 0;               /* Allows text wrapping */
+    word-wrap: break-word;      /* Ensures text wraps properly */
+    overflow: hidden; /* Hide overflow during animation */
+    white-space: nowrap; /* Keep text on one line during animation */
+    border-right: .15em solid #c92f2f; /* Cursor effect */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    display: inline-block; /* Required for width animation */
+    vertical-align: middle; /* Better alignment */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #c92f2f }
+}
+
+
+/* Image Styles */
+.imageH {
+    border-radius: 2rem;
+    max-height: 40rem;
+    width: auto;                /* Maintain aspect ratio */
+    border-radius: 2rem;
+    flex-shrink: 0;             /* Prevent image from shrinking */
+    object-fit: contain;        /* Ensures full image is visible */
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    clear: both; 
+  }
+
+  .card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .card-list .card-item {
+    list-style: none;
+  }
+  
+  .card-list .card-item .card-link {
+    display: block;
+    background: #000000; /* White card background */
+    padding: 18px;
+    user-select: none;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid #ff0000; /* Light grey border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card-list .card-item .card-link:hover {
+    border-color: #e20101; /* Red border on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(201, 47, 47, 0.2);
+  }
+
+
+  .card-list .card-link .card-image {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 4/5; /* Taller aspect ratio */
+    object-fit: cover;
+    height: 300px; /* Fixed height */
+  }
+  
+  /* Updated badge styles with red/grey theme */
+  .card-list .card-link .badge {
+    color: #a60000;
+    width: fit-content;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 600;
+    background: #c92f2f; /* Red background */
+    margin: 16px 0 18px;
+  }
+  
+  .card-list .card-link .badge-azze {
+    background: #8f4e22; /* Dark grey */
+    color: #fbf9f9;
+  }
+  
+  .card-list .card-link .badge-kazuya {
+    background: #b45424; /* Red */
+    color: #ffffff;
+  }
+  
+  .card-list .card-link .badge-two {
+    background: #777777; /* Medium grey */
+    color: #ffffff;
+  }
+  
+  .card-list .card-link .badge-Regina {
+    background: #cb3f3f; /* Red */
+    color: #ffffff;
+  }
+  
+  .card-list .card-link .badge-none {
+    background: #680b0b; /* Light grey */
+    color: #ffffff;
+  }
+  
+  .card-list .card-link .card-title {
+    color: #be9c9c; /* Dark grey text */
+    font-size: 1.3rem; /* Slightly larger */
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  /* Updated button styles */
+  .card-list .card-link .card-button {
+    height: 40px; /* Slightly larger */
+    width: 40px;
+    color: #c92f2f; /* Red */
+    margin: 20px 0 5px;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #c92f2f;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+  
+  .card-list .card-link:hover .card-button {
+    color: #ffffff;
+    background: #c92f2f;
+    transform: rotate(0deg);
+  }
+  
+  /* Updated swiper controls */
+  .card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #302f2f; /* Grey */
+  }
+  
+  .card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #c92f2f; /* Red */
+  }
+  
+  .card-wrapper .swiper-slide-button {
+    color: #c92f2f; /* Red */
+    margin-top: -35px;
+    font-weight: bold;
+  }
+
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .mainHead {
+        font-size: 2.2rem;     
+        text-align: center;     
+    }
+    
+    .imageH {
+        border-radius: 2rem;
+        max-height: 30rem;
+        width: 100%;            
+    }
+  .card-wrapper {
+    margin: 0 10px 25px;
+  }
+
+  .card-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
